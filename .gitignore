@@ -21,6 +21,8 @@ UserSettings/
 *.mdb
 *.opendb
 *.VC.db
+*.vs/
+
 
 # Rider
 .idea/
