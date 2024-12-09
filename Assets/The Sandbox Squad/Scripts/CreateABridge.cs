@@ -1,20 +1,21 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver.Primitives;
 
 public class CreateABridge : MonoBehaviour
 {
-    private Transform startPoint;
+    [SerializeField] private Transform startPoint;
     [SerializeField] private Transform endPoint;
     [SerializeField] private GameObject bridgeFragment;
     [SerializeField] private bool twitter = true;
-    [SerializeField] private float bridgeCreationSpeed;
+    [SerializeField] private float bridgeCreationSpeed = 1;
     private GameObject brigdoo;
     private Vector3 postione = new Vector3(0, -5, 0);
+    private bool orpOrzel = false;
 
     private void Start()
     {
-        startPoint = this.transform;
+        //startPoint = this.transform;
         postione = startPoint.position;
         brigdoo = Instantiate(bridgeFragment, startPoint);
         brigdoo.transform.position -= new Vector3(0, 5, 0);
@@ -30,61 +31,96 @@ public class CreateABridge : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         brigdoo.SetActive(true);
-        CreateBridgeSegment(brigdoo);
+        string sideo = DetermineSide();
         if (twitter)
         {
-            postione += new Vector3(TheSizeOfTheBridgeFragment.theSize*DetermineSide(twitter), 0, 0);
+            if (sideo.Any(c => c == 'N'))
+            {
+                CreateBridgeSegment('N');
+                postione += new Vector3(TheSizeOfTheBridgeFragment.theSize, 0, 0);
+            }
+            else
+            {
+                CreateBridgeSegment('S');
+                postione += new Vector3(-TheSizeOfTheBridgeFragment.theSize, 0, 0);
+            }
         }
         else
         {
-            postione += new Vector3(0, 0, TheSizeOfTheBridgeFragment.theSize * DetermineSide(twitter));
+            //TODO: add create a bridgeEW
         }
     }
 
 
-    public void CreateBridgeSegment(GameObject praviousBridgeFragment)
+    public void CreateBridgeSegment(char dist, bool dontBuildNext = false)
     {
         GameObject segmento = Instantiate(bridgeFragment, startPoint);
         segmento.transform.position += postione;
         segmento.GetComponent<SpeedOfTheBridge>().initalaSpeed = 0.02f;
         segmento.GetComponent<SpeedOfTheBridge>().deacceleration = 0.005f / bridgeCreationSpeed;
-        if (twitter)
+        if (!dontBuildNext)
         {
-            postione += new Vector3(TheSizeOfTheBridgeFragment.theSize * DetermineSide(twitter), 0, 0);
-            if (postione.x >= endPoint.transform.position.x)
-            {
-
-            }
-        }
-        else
-        {
-            postione += new Vector3(0, 0, TheSizeOfTheBridgeFragment.theSize * DetermineSide(twitter));
+            StartCoroutine(CreateNextBridgeFragment(dist));
         }
     }
 
-    public int DetermineSide(bool xaxis)
+    IEnumerator CreateNextBridgeFragment(char dist)
     {
-        if (xaxis)
+        yield return new WaitForSeconds(0.5f);
+        if (CheckDistance(dist))
         {
-            if (startPoint.position.x > endPoint.position.x)
+            CreateBridgeSegment(dist, true);
+            string sideAgain = DetermineSide();
+            orpOrzel = true;
+            if (sideAgain.Any(c => c == 'E'))
             {
-                return -1;
+                //TODO: add create a bridgeEW
             }
-            else
-            {
-                return 1;
-            }
+        }
+    }
+
+    public string DetermineSide()
+    {
+        string side = "";
+        if (startPoint.position.x > endPoint.position.x)
+        {
+            side += "S";
         }
         else
         {
-            if (startPoint.position.z > endPoint.position.z)
-            {
-                return -1;
-            }
-            else
-            {
-                return 1;
-            }
+            side += "N";
         }
+        if (startPoint.position.z > endPoint.position.z)
+        {
+            side += "E";
+        }
+        else
+        {
+            side += "W";
+        }
+        return side;
+    }
+
+    public bool CheckDistance(char side)
+    {
+        switch(side)
+        {
+            case 'N':
+                if ((startPoint.position + postione + new Vector3(TheSizeOfTheBridgeFragment.theSize, 0, 0)).x > endPoint.position.x)
+                {
+                    return true;
+                }
+                break;
+            case 'S':
+                if ((startPoint.position + postione + new Vector3(-TheSizeOfTheBridgeFragment.theSize, 0, 0)).x < endPoint.position.x)
+                {
+                    return true;
+                }
+                //TODO: add create a bridgeEW
+                break;
+            default:
+                break;
+        }
+        return false;
     }
 }

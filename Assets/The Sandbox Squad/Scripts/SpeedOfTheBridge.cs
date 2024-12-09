@@ -6,7 +6,6 @@ public class SpeedOfTheBridge : MonoBehaviour
     public float deacceleration;
     public float initalaSpeed;
     public float maxYPos;
-    public CreateABridge createABridge;
 
     private void Update()
     {
@@ -15,7 +14,7 @@ public class SpeedOfTheBridge : MonoBehaviour
             this.transform.position += new Vector3(0, initalaSpeed, 0);
             initalaSpeed -= deacceleration;
             deacceleration -= 0.00005f;
-            if (initalaSpeed < 0.02)
+            if (initalaSpeed < 0.02 && initalaSpeed != 0)
             {
                 initalaSpeed = 0.02f;
             }
