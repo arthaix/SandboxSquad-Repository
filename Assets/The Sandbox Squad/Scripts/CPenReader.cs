@@ -14,26 +14,18 @@ public class CPenReader : MonoBehaviour
                 sentenceScanLevel += 1;
                 print("Scan " + sentenceScanLevel);
             }
-
+            else
+            {
+                print("Scanfailed");
+                sentenceScanLevel = 0;
+            }
         }
-
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         scanChecker();
     }
 
     void scanChecker()
     {
-        if (sentenceScanLevel == 3)
+        if (sentenceScanLevel == 5)
         {
             print("sentence scanned");
             sentenceScanLevel = 0;
