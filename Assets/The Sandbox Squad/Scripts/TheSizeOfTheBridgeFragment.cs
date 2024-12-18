@@ -20,6 +20,5 @@ public class TheSizeOfTheBridgeFragment : MonoBehaviour
         float zLength = worldForward.magnitude;
 
         theSize = Mathf.Min(xLength, zLength);
-        Debug.Log("HUHUHU: " + theSize);
     }
 }
