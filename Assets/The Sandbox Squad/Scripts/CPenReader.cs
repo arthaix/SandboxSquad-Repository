@@ -14,11 +14,13 @@ public class CPenReader : MonoBehaviour
                 sentenceScanLevel += 1;
                 print("Scan " + sentenceScanLevel);
             }
+            /*
             else
             {
-                print("Scanfailed");
+                print("Scan failed");
                 sentenceScanLevel = 0;
             }
+            */
         }
         scanChecker();
     }
@@ -27,7 +29,8 @@ public class CPenReader : MonoBehaviour
     {
         if (sentenceScanLevel == 5)
         {
-            print("sentence scanned");
+            print("Sentence Scanned");
+            gameObject.GetComponent<AudioSource>().Play();
             sentenceScanLevel = 0;
         }
     }
