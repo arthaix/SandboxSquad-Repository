@@ -4,6 +4,7 @@ public class CPenReader : MonoBehaviour
 {
     int sentenceScanLevel = 0;
     bool scanningSentence;
+    public GameObject scannerLight;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "ReadingPoint")
@@ -32,6 +33,14 @@ public class CPenReader : MonoBehaviour
             print("Sentence Scanned");
             gameObject.GetComponent<AudioSource>().Play();
             sentenceScanLevel = 0;
+        }
+        else if (sentenceScanLevel == 0)
+        {
+            scannerLight.SetActive(false);
+        }
+        else
+        {
+            scannerLight.SetActive(true);
         }
     }
 }
