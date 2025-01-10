@@ -24,20 +24,28 @@ public class CPenReader : MonoBehaviour
         float trigger = triggerInput.action.ReadValue<float>();
         if (trigger > 0)
         {
-            scannerLight.SetActive(true);
-            //audio.resource = scanningAudio;
-            //audio.loop = true;
-            //audio.Play();
+            if (scanningSentence == false)
+            {
+                scannerLight.SetActive(true);
+                audio.resource = scanningAudio;
+                audio.loop = true;
+                audio.Play();
+            }
             scanningSentence = true;
         }
         else
         {
-            audio.loop = false;
+            if (audio.resource == scanningAudio)
+            {
+                audio.Stop();
+            }
             scanningSentence = false;
-            scannerLight.SetActive(false);
             sentenceScanLevel = 0;
+            scanChecker();
         }
+        
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
