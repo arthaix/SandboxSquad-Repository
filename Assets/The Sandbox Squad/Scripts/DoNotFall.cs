@@ -3,17 +3,17 @@ using UnityEngine;
 public class DoNotFall : MonoBehaviour
 {
 
-    [SerializeField, Tooltip("Put the point where you want the object to teleport back to here. Leave empty if you want it the same as starting position")] private Transform Telepoint;
-    private Vector3 TelePointPos;
+    [SerializeField, Tooltip("Put the point where you want the object to teleport back to here. Leave empty if you want it the same as starting position")] private Transform telepoint;
+    private Vector3 telePointPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (Telepoint == null)
+        if (telepoint == null)
         {
-            Telepoint = this.transform;
+            telepoint = this.transform;
         }
-        TelePointPos = Telepoint.position;
+        telePointPos = telepoint.position;
     }
 
     // Update is called once per frame
@@ -27,6 +27,6 @@ public class DoNotFall : MonoBehaviour
 
     private void TeleportTime()
     {
-        this.transform.position = TelePointPos;
+        this.transform.position = telePointPos;
     }
 }
