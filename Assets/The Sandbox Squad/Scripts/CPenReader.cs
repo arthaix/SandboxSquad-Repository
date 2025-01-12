@@ -18,36 +18,34 @@ public class CPenReader : MonoBehaviour
         audio.resource = scanningAudio;
 
     }
-
-    private void Update()
-    {
-        float trigger = triggerInput.action.ReadValue<float>();
-        if (trigger > 0)
-        {
-            if (scanningSentence == false)
-            {
-                scannerLight.SetActive(true);
-                audio.resource = scanningAudio;
-                audio.loop = true;
-                audio.Play();
-            }
-            scanningSentence = true;
-        }
-        else
-        {
-            if (audio.resource == scanningAudio)
-            {
-                audio.Stop();
-            }
-            scanningSentence = false;
-            sentenceScanLevel = 0;
-            scanChecker();
-        }
-        
-    }
     
+    
+    public void activateReading()
+    {
+        if (scanningSentence == false)
+        {
+            scannerLight.SetActive(true);
+            audio.resource = scanningAudio;
+            audio.loop = true;
+            audio.Play();
+        }
+        scanningSentence = true;
+    }
 
-    private void OnTriggerEnter(Collider other)
+    public void deactivateReading()
+    {
+        if (audio.resource == scanningAudio)
+        {
+            audio.Stop();
+        }
+        scanningSentence = false;
+        sentenceScanLevel = 0;
+        scanChecker();
+    }
+
+
+
+    private void OnTriggerStay(Collider other)
     {
         
         if (other.tag == "ReadingPoint" && scanningSentence)
@@ -57,8 +55,9 @@ public class CPenReader : MonoBehaviour
             {
                 sentenceScanLevel += 1;
                 print("Scan " + sentenceScanLevel);
+                scanChecker();
             }
-            /*
+            /*       THIS FAILS THE SCAN IF YOU SCAN OUT OF ORDER
             else
             {
                 print("Scan failed");
@@ -66,7 +65,6 @@ public class CPenReader : MonoBehaviour
             }
             */
         }
-        scanChecker();
     }
 
     void scanChecker()
@@ -83,6 +81,7 @@ public class CPenReader : MonoBehaviour
         else if (sentenceScanLevel == 0)
         {
             scannerLight.SetActive(false);
+            scanningSentence = false;
         }
         else
         {

@@ -684,6 +684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
+    - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1508,7 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489c8d84f0f08bb45bf1aee5f86db365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Telepoint: {fileID: 0}
+  telepoint: {fileID: 0}
 --- !u!1001 &941286726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3319,6 +3323,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2501672967550053340, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2501672967550053340, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813413888365802922, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9875d280cb21fe448901b39a5581db03, type: 2}
+    - target: {fileID: 3738320325863905441, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738320325863905441, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3981302857192066757, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.743
@@ -3362,6 +3386,30 @@ PrefabInstance:
     - target: {fileID: 4326760182741603455, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
       propertyPath: m_Name
       value: Coded ruin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297034723744222744, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297034723744222744, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724676317752340013, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724676317752340013, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725597482558549884, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_Size.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8725597482558549884, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
