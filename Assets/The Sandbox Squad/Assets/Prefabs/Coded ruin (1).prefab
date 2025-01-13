@@ -47,11 +47,64 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.12}
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2712274706647859470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7512794236101044795}
+  - component: {fileID: 1947034197886631574}
+  m_Layer: 0
+  m_Name: Reading point 6
+  m_TagString: ReadingPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &7512794236101044795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712274706647859470}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.449, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6472814998494943824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1947034197886631574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2712274706647859470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4503364494283692979
 GameObject:
@@ -100,11 +153,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.12}
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4552322346070986025
 GameObject:
@@ -153,11 +206,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.12}
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5070650005265472977
 GameObject:
@@ -206,11 +259,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.12}
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5626922986418555774
 GameObject:
@@ -246,6 +299,7 @@ Transform:
   - {fileID: 122455970889503315}
   - {fileID: 8452484500578809670}
   - {fileID: 3573005898470149806}
+  - {fileID: 7512794236101044795}
   m_Father: {fileID: 3981302857192066757}
   m_LocalEulerAnglesHint: {x: -177.062, y: 0, z: 80.23}
 --- !u!65 &2501672967550053340
@@ -263,11 +317,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.12}
+  m_Size: {x: 0.18, y: 0.09, z: 0.35}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3515856275736045870
 PrefabInstance:
@@ -337,6 +391,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -5836411390915369006, guid: 8aa987866de0f6845acadb6439dafaae, type: 3}
+    - target: {fileID: -7511558181221131132, guid: 8aa987866de0f6845acadb6439dafaae, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9875d280cb21fe448901b39a5581db03, type: 2}
     - target: {fileID: 919132149155446097, guid: 8aa987866de0f6845acadb6439dafaae, type: 3}
       propertyPath: m_Name
       value: Coded ruin (1)
