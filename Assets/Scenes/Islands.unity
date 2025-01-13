@@ -139,7 +139,11 @@ MonoBehaviour:
   telepoint: {fileID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1001 &156678295
+=======
+--- !u!1001 &164876637
+>>>>>>> Stashed changes
 =======
 --- !u!1001 &164876637
 >>>>>>> Stashed changes
@@ -153,6 +157,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -199,6 +204,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Device Simulator
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     - target: {fileID: -8679921383154817045, guid: 327d62773e360fc49a5de9969cd272ba, type: 3}
@@ -257,6 +264,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button_circle_v2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -266,9 +276,12 @@ PrefabInstance:
     m_AddedGameObjects: []
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     m_AddedComponents:
@@ -283,6 +296,9 @@ PrefabInstance:
       addedObject: {fileID: 1931985277}
   m_SourcePrefab: {fileID: 100100000, guid: 327d62773e360fc49a5de9969cd272ba, type: 3}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -5775,8 +5791,11 @@ SceneRoots:
   - {fileID: 1262791389}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - {fileID: 156678295}
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   - {fileID: 164876637}
@@ -5785,6 +5804,9 @@ SceneRoots:
   - {fileID: 1142827167}
   - {fileID: 995061290}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
