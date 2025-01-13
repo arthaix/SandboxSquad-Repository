@@ -1,17 +1,21 @@
+using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class PressTheButton : MonoBehaviour
 {
-
-    [SerializeField] private GameObject buttonMain;
+    public static string[] code = new string[3];
+    [SerializeField] private GameObject bridgeCreator;
+    [SerializeField] private GameObject player;
+    [SerializeField] private string code_fragment = null;
     private Vector3 basicPosition;
-    private bool isPressedRN;
+    private bool isPressedRN = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        basicPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -22,40 +26,63 @@ public class PressTheButton : MonoBehaviour
     
     public void PublicReccurectingEmergencySpringService()
     {
+        Debug.Log("Yeah, I'm here");
         if (!isPressedRN)
         {
-            basicPosition = buttonMain.transform.position;
-            MoveTheButton(false);
+            StartCoroutine(MoveTheButton(false));
             isPressedRN = true;
         }
     }
 
-    private IEnumerable MoveTheButton(bool up)
+    private IEnumerator MoveTheButton(bool up)
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         if (up)
         {
-            buttonMain.transform.position += new Vector3(0, 0.1f, 0);
-            if (buttonMain.transform.position.y < basicPosition.y)
+            this.transform.position += new Vector3(0, 0.005f, 0);
+            if (this.transform.position.y <= basicPosition.y)
             {
-                MoveTheButton(true);
+                StartCoroutine(MoveTheButton(true));
             }
             else
             {
                 isPressedRN = false;
+                AdjustTheCode(code_fragment);
+                isCodeCorrect();
             }
         }
         else
         {
-            buttonMain.transform.position += new Vector3(0, -0.1f, 0);
-            if (buttonMain.transform.position.y < basicPosition.y - 0.5)
+            this.transform.position += new Vector3(0, -0.005f, 0);
+            if (this.transform.position.y <= basicPosition.y - 0.03)
             {
-                MoveTheButton(true);
+                StartCoroutine(MoveTheButton(true));
             }
             else
             {
-                MoveTheButton(false);
+                StartCoroutine(MoveTheButton(false));
             }
+        }
+    }
+
+    private void AdjustTheCode(string code_input)
+    {
+        code[0] = code[1];
+        code[1] = code[2];
+        code[2] = code_input;
+    }
+
+    private void isCodeCorrect()
+    {
+        bool itIsCorrect = true;
+        if (code.Any(c => c == null) || code[0] != "Triangle" || code[1] != "Circle" || code[2] != "Square")
+        {
+            itIsCorrect = false;
+        }
+
+        if (itIsCorrect)
+        {
+            bridgeCreator.transform.position = player.transform.position;
         }
     }
 }
