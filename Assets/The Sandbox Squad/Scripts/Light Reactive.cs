@@ -20,7 +20,7 @@ public class LightReactive : MonoBehaviour
 
     public void lightInteraction()
     {
-        Debug.Log("WORKIN");
+        //Debug.Log("WORKIN");
         switch (lightReactiveObjectID)
         {
             case 1:
@@ -29,7 +29,7 @@ public class LightReactive : MonoBehaviour
                 createBridge1.transform.position = player.transform.position;
                 break;
             case 2:
-                Debug.Log("WORKIN");
+                //Debug.Log("WORKIN");
                 cpen_reader.SetActive(true);
                 chest.GetComponent<BoxCollider>().enabled = false;
                 Animator animator = chest.GetComponent<Animator>();
