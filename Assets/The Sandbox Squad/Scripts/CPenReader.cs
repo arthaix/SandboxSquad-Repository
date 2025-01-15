@@ -8,6 +8,7 @@ public class CPenReader : MonoBehaviour
     int sentenceScanLevel = 0;
     bool scanningSentence;
     public GameObject scannerLight;
+    public Transform codedRuin;
     AudioSource audio;
     public Material scanTextMaterial;
 
@@ -18,7 +19,7 @@ public class CPenReader : MonoBehaviour
     {
         audio = gameObject.GetComponent<AudioSource>();
         audio.resource = scanningAudio;
-        scanTextMaterial.SetFloat("_Scanned_amount", 0f);
+        scanTextMaterial.SetFloat("_Scanned_amount", -codedRuin.position.x + -1.08f);
     }
     
     
@@ -92,6 +93,6 @@ public class CPenReader : MonoBehaviour
             audio.loop = true;
             audio.Play();
         }
-        scanTextMaterial.SetFloat("_Scanned_amount", 0.75f * sentenceScanLevel);
+        scanTextMaterial.SetFloat("_Scanned_amount", -codedRuin.position.x + -1.08f + 0.3f * sentenceScanLevel);
     }
 }

@@ -930,7 +930,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3981302857192066757, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.298
+      value: 10.52
       objectReference: {fileID: 0}
     - target: {fileID: 3981302857192066757, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -977,6 +977,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+--- !u!4 &431990693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3981302857192066757, guid: 280bfbc0c3d647f4aa390cc65246d1d3, type: 3}
+  m_PrefabInstance: {fileID: 431990692}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &510790504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3825,6 +3830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5217993927504829146, guid: 2efa94e9a86c7f44db2a6113bdfd9aa6, type: 3}
+      propertyPath: codedRuin
+      value: 
+      objectReference: {fileID: 431990693}
     - target: {fileID: 5217993927504829146, guid: 2efa94e9a86c7f44db2a6113bdfd9aa6, type: 3}
       propertyPath: textScanShader
       value: 
