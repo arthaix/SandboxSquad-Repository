@@ -33,7 +33,7 @@ public class LightReactive : MonoBehaviour
                 cpen_reader.SetActive(true);
                 chest.GetComponent<BoxCollider>().enabled = false;
                 Animator animator = chest.GetComponent<Animator>();
-                animator.SetBool("Open", true);
+                animator.SetBool("open", true);
                 break;
         }
     }
