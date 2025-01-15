@@ -6,7 +6,7 @@ public class LightReactive : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lightActive();
+
     }
 
     // Update is called once per frame
@@ -14,13 +14,13 @@ public class LightReactive : MonoBehaviour
     {
     }
 
-    public void lightActive()
+    public void lightInteraction()
     {
         switch(lightReactiveObjectID)
         {
             case 1:
                 SkinnedMeshRenderer ghostieMeshRenderer = gameObject.GetComponent<SkinnedMeshRenderer>();
-                ghostieMeshRenderer.SetBlendShapeWeight(0, Mathf.Lerp(ghostieMeshRenderer.GetBlendShapeWeight(1), 0, 40 * Time.deltaTime));
+                ghostieMeshRenderer.SetBlendShapeWeight(0, Mathf.Lerp(ghostieMeshRenderer.GetBlendShapeWeight(0), 0, 0.4f * Time.deltaTime));
             break;
 
         }
