@@ -191,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -936,7 +936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c28fde17fa2954586eed09ee0f76f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonMain: {fileID: 0}
+  bridgeCreator: {fileID: 0}
+  player: {fileID: 0}
+  code_fragment: 
 --- !u!65 &348272794
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1367,7 +1369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c28fde17fa2954586eed09ee0f76f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonMain: {fileID: 0}
+  bridgeCreator: {fileID: 0}
+  player: {fileID: 0}
+  code_fragment: 
 --- !u!65 &437583460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1924,7 +1928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c28fde17fa2954586eed09ee0f76f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonMain: {fileID: 0}
+  bridgeCreator: {fileID: 0}
+  player: {fileID: 0}
+  code_fragment: 
 --- !u!65 &595518388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2489,7 +2495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c28fde17fa2954586eed09ee0f76f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonMain: {fileID: 0}
+  bridgeCreator: {fileID: 0}
+  player: {fileID: 0}
+  code_fragment: 
 --- !u!65 &697840532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4039,7 +4047,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21c28fde17fa2954586eed09ee0f76f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonMain: {fileID: 0}
+  bridgeCreator: {fileID: 0}
+  player: {fileID: 0}
+  code_fragment: 
 --- !u!65 &1219242456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9897,6 +9907,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 453e49fe672e5244383a289a1a6399f1, type: 3}
       propertyPath: m_Name
       value: Chest with animations 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 453e49fe672e5244383a289a1a6399f1, type: 3}
+      propertyPath: m_TagString
+      value: Light Reactive
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
