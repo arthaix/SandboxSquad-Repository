@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/TechnicalArtIslands.unity
     guid: b7e3da86f66818245856628df3a16e7a
   - enabled: 1
+    path: Assets/Scenes/Storyline.unity
+    guid: bae075933ff921041b823e280f2fab4d
+  - enabled: 1
     path: Assets/Scenes/Islands.unity
     guid: d8601566d3e104845ad99f2a01d0b0bd
   m_configObjects:
