@@ -31,7 +31,7 @@ public class StoryButton : MonoBehaviour
                     storyScreen.material = pureHate;
                     break;
                 case 2:
-
+                    storyScreen.material = pureDeath;
                     break;
                 case 3:
                     storyScreen.material = pureLight;
