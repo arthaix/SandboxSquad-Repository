@@ -3,7 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class StoryButton : MonoBehaviour
 {
-    [SerializeField] private Mesh storyScreen;
+    [SerializeField] private Renderer storyScreen;
+    [SerializeField] private Material pureHate;
+    [SerializeField] private Material pureDeath;
+    [SerializeField] private Material pureLight;
 
     private int storyNum = 0;
 
@@ -20,9 +23,20 @@ public class StoryButton : MonoBehaviour
     public void ChangeTheScene()
     {
         storyNum++;
-        if (storyNum < 3)
+        if (storyNum < 4)
         {
+            switch (storyNum)
+            {
+                case 1:
+                    storyScreen.material = pureHate;
+                    break;
+                case 2:
 
+                    break;
+                case 3:
+                    storyScreen.material = pureLight;
+                    break;
+            }
         }
         else
         {

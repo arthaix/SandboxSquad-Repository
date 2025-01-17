@@ -352,7 +352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c172081fced92254ca0e4a356dc8127a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -390,13 +390,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860323014}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 3, z: 2.95}
   m_LocalScale: {x: 0.6, y: 1, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!224 &52319259877450709
 RectTransform:
   m_ObjectHideFlags: 0
@@ -801,7 +801,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b9e862559e5bb4c83350e3d0584058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storyScreen: {fileID: 0}
+  storyScreen: {fileID: 1860323016}
+  pureHate: {fileID: 2100000, guid: e9bcc042bb20ff1429fef4587ce0a9ce, type: 2}
+  pureDeath: {fileID: 0}
+  pureLight: {fileID: 2100000, guid: 7bc2cd49b1027334cb7ff70a4ec5b9a2, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
