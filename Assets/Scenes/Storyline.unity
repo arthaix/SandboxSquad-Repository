@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyScreen: {fileID: 1860323016}
   pureHate: {fileID: 2100000, guid: e9bcc042bb20ff1429fef4587ce0a9ce, type: 2}
-  pureDeath: {fileID: 0}
+  pureDeath: {fileID: 2100000, guid: 84b43224d3b5ed14e8331ac06a4d5984, type: 2}
   pureLight: {fileID: 2100000, guid: 7bc2cd49b1027334cb7ff70a4ec5b9a2, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
